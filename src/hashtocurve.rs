@@ -105,6 +105,7 @@ pub fn iso_map<F: Field, C: CurveExt<Base = F>, I: CurveExt<Base = F>>(
     C::new_jacobian(xo, yo, zo).unwrap()
 }
 
+///
 #[allow(clippy::many_single_char_names)]
 pub fn map_to_curve_simple_swu<F: PrimeField, C: CurveExt<Base = F>, I: CurveExt<Base = F>>(
     u: &F,

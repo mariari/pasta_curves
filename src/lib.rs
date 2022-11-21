@@ -26,7 +26,7 @@ pub mod pallas;
 pub mod vesta;
 
 #[cfg(feature = "alloc")]
-mod hashtocurve;
+pub mod hashtocurve;
 
 #[cfg(feature = "serde")]
 mod serde_impl;

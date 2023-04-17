@@ -502,19 +502,19 @@ impl ff::Field for Fp {
     }
 
     fn sqrt_ratio(num: &Self, div: &Self) -> (Choice, Self) {
-        #[cfg(feature = "sqrt-table")]
-        {
-            FP_TABLES.sqrt_ratio(num, div)
-        }
+        // #[cfg(feature = "sqrt-table")]
+        // {
+        //     FP_TABLES.sqrt_ratio(num, div)
+        // }
 
-        #[cfg(not(feature = "sqrt-table"))]
+        // #[cfg(not(feature = "sqrt-table"))]
         ff::helpers::sqrt_ratio_generic(num, div)
     }
 
-    #[cfg(feature = "sqrt-table")]
-    fn sqrt_alt(&self) -> (Choice, Self) {
-        FP_TABLES.sqrt_alt(self)
-    }
+    // #[cfg(feature = "sqrt-table")]
+    // fn sqrt_alt(&self) -> (Choice, Self) {
+    //     FP_TABLES.sqrt_alt(self)
+    // }
 
     /// Computes the square root of this element, if it exists.
     fn sqrt(&self) -> CtOption<Self> {
